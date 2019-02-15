@@ -1,0 +1,55 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <title>readLearn</title>
+    <p>A web app for language learners that like to read!</p>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    
+   
+</head>
+<body>
+   
+    <div class="flex-container">
+            <div class="mainForm" style="flex-grow: 1">
+                    <form id="input-form">
+                        <h1 class="title1">Insert Story Here!</h1>
+                        <label> </label>
+                        <input type="text" name="story" id="story" size="50" value=""/>
+                        <input type="button" name ="submit_b" id="submit_b" value="Submit!"/>
+                        
+                    </form>
+                </div>
+        <div id="storyDisplay" style="flex-grow: 3"></div>
+       
+        <br></br>
+       
+        <div id="finish" class="finish" style="flex-grow: 1">
+                    <form id="finish-session">
+                            <input type="button" name ="finish_s" id="finish_s" value="Done for today? Here's Your Final List!"/>
+                    </form>
+        </div>
+            
+        <div id="restart" class="restart" style="flex-grow: 1">
+                        <form id="restart-session">
+                                <input type="button" name ="restart_s" id="restart_s" value="Start Over!"/>
+                        </form>
+        </div>
+            
+        <div id="listDisplay" style="flex-grow: 1"></div>
+    </div>
+
+    
+
+    
+
+    
+
+
+
+    <!-- <div class="text">
+        <div>Click the words you don't know:</div>
+    </div> -->
+    <script src="./card-script.ts"></script>
+
+</body>
+</html>
