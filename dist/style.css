@@ -1,6 +1,7 @@
 /* HEADERS AND OVERALL */
 
-head, body {
+head,
+body {
   font-family: "Quicksand", sans-serif;
   text-align: justify;
   background-color: #2e8d52;

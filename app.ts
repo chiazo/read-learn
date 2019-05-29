@@ -1,3 +1,4 @@
+
 let finished = false;
 let clickedList: string[] = [];
 let formInput = document.createElement("input-form");
@@ -5,6 +6,7 @@ let submitButton = document.getElementById("submit_b") as HTMLElement;
 let finishButton = document.getElementById("finish_s") as HTMLElement;
 let restartButton = document.getElementById("restart_s") as HTMLElement;
 let storyInput = document.getElementById("story") as HTMLInputElement;
+
 
 let clickedWord = (event: MouseEvent) => {
     let clickedWord = (event.target as HTMLDivElement).innerText;

@@ -1,6 +1,3 @@
-import _ from "lodash";
-import "/Users/chiazo/readLearn/style.css";
-
 "use strict";
 var finished = false;
 var clickedList = [];
@@ -68,3 +65,4 @@ finishButton.onclick = function (event) {
     clickedList = [];
     finished = true;
 };
+//# sourceMappingURL=app.js.map
