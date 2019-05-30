@@ -17,18 +17,32 @@ let saveStory = () => {
     let aContainer = document.createElement("div");
     aContainer.className += "  third";
     let aPar = document.createElement("p");
-    //document.getElementById("storyDisplay")!.appendChild(aPar);
+    let specChar = false;
     let storydisplay = document.getElementById("storyDisplay")!;
     for (let i = 0; i < words.length;  i++) {
         // console.log(spanWords(words[i], " "));
         let aSpan = document.createElement("span");
-        aSpan.innerText = words[i] + " ";
+        let text = document.createTextNode(words[i]);
+        let format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
+
+        if (format.test(words[i].charAt(words[i].length - 1))) {
+            text = document.createTextNode(words[i].substring(0, words[i].length-1));
+           // words[i].charAt(words[i].length - 1);
+           specChar = true;
+        } 
+        
+        aSpan.appendChild(text);
         aSpan.addEventListener("click", function() {
             clickedList[clickedList.length] = aSpan.innerText;
             aSpan.style.backgroundColor = "yellow";
         });
         aPar.appendChild(aSpan);
-        
+        if (specChar) {
+            aPar.appendChild(document.createTextNode(words[i].charAt(words[i].length - 1) + " "));
+            specChar = false;
+        } else {
+            aPar.appendChild(document.createTextNode(" "));
+        }
     }
     aContainer.appendChild(aPar);
     storydisplay.appendChild(aContainer);

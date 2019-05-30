@@ -16,17 +16,31 @@ var saveStory = function () {
     var aContainer = document.createElement("div");
     aContainer.className += "  third";
     var aPar = document.createElement("p");
-    //document.getElementById("storyDisplay")!.appendChild(aPar);
+    var specChar = false;
     var storydisplay = document.getElementById("storyDisplay");
     var _loop_1 = function (i) {
         // console.log(spanWords(words[i], " "));
         var aSpan = document.createElement("span");
-        aSpan.innerText = words[i] + " ";
+        var text = document.createTextNode(words[i]);
+        var format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
+        if (format.test(words[i].charAt(words[i].length - 1))) {
+            text = document.createTextNode(words[i].substring(0, words[i].length - 1));
+            // words[i].charAt(words[i].length - 1);
+            specChar = true;
+        }
+        aSpan.appendChild(text);
         aSpan.addEventListener("click", function () {
             clickedList[clickedList.length] = aSpan.innerText;
             aSpan.style.backgroundColor = "yellow";
         });
         aPar.appendChild(aSpan);
+        if (specChar) {
+            aPar.appendChild(document.createTextNode(words[i].charAt(words[i].length - 1) + " "));
+            specChar = false;
+        }
+        else {
+            aPar.appendChild(document.createTextNode(" "));
+        }
     };
     for (var i = 0; i < words.length; i++) {
         _loop_1(i);
