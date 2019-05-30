@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A web app that takes in a text in another language, allowing the user to click words they don't know. Outputs a list of words to study later!",
   "private": "true",
+  "homepage": "https://chiazo.github.io/readLearn",
   "files": [
     "/public/"
   ],
@@ -13,6 +14,7 @@
     "lite": "lite-server",
     "start": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
     "build": "webpack",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "keywords": [
@@ -33,6 +35,7 @@
     "webpack-cli": "^3.3.2"
   },
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "lodash": "^4.17.11",
     "typescript-bundle": "^1.0.14"
   }

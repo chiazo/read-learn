@@ -15,7 +15,7 @@ let clickedWord = (event: MouseEvent) => {
 let saveStory = () => {
     finished = false;
     let input = storyInput.value;
-    let words = input.split(" ", input.length - 1);
+    let words = input.split(/\W+/);
     let aContainer = document.createElement("div");
     aContainer.className += "  third";
     let aPar = document.createElement("p");
