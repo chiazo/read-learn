@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: '/Users/chiazo/readLearn/app.ts',
+  entry: '/Users/chiazo/read-learn/app.ts',
   devtool: 'inline-source-map',
   module: {
     rules: [
