@@ -4,9 +4,6 @@
   "description": "A web app that takes in a text in another language, allowing the user to click words they don't know. Outputs a list of words to study later!",
   "private": "true",
   "homepage": "https://chiazo.github.io/read-learn",
-  "files": [
-    "/public/"
-  ],
   "scripts": {
     "test": "this works!",
     "tsc": "tsc",
